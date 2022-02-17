@@ -1,6 +1,6 @@
-import React, {useEffect, useMemo, useState, useCallback} from "react";
+import {useEffect, useMemo, useState, useCallback} from "react";
 import * as Icons from "../Icons";
-import {Grid, Row, Col, ButtonWrapperBuy, ButtonWrapperBin} from './styled.js'
+import {Grid, Row, Col, ButtonWrapperBuy} from './styled.js'
 import QuantityButton from '../QuantityButton'
 import { getBasket, saveBasket, submitOrder} from '../../api'
 import {curretBasket_id} from '../../_config_basket.js'
@@ -84,7 +84,7 @@ export default function CartGrid(props) {
     const result = await saveBasket(newBasket._id, newBasket);
     const data = await result.json();
     if(!data.errors?.length){
-      toast.success('Your order was successfully saved!');
+      toast.success('Your basket was successfully saved!');
     }else {
       data.errors.forEach((err,idx) => {
         toast.error(err.error,{id: idx});
@@ -149,10 +149,10 @@ export default function CartGrid(props) {
         <Col size={2}></Col>
         <Col size={1}></Col>
         <Col size={1} style={{justifyContent: 'end',display: 'flex'}}>
-          <ButtonWrapperBuy className='square-button' name="BUY NOW" onAction={onSubmitOrder} />
+          <ButtonWrapperBuy className='square-button' disabled={!products.length} name="BUY NOW" onAction={onSubmitOrder} />
         </Col>
         <Col size={1}>
-          <ButtonWrapperBuy className='square-button'  name="SAVE CART" onAction={onSaveCart} />
+          <ButtonWrapperBuy className='square-button' disabled={!products.length} name="SAVE CART" onAction={onSaveCart} />
         </Col>
       </Row>
     </Grid>;

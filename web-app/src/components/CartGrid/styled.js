@@ -28,6 +28,11 @@ export const ButtonWrapperBuy = styled(Button)`
         box-shadow: 0px 2px 2px 0 #d4d4d4;
         border-radius: 3px;
         padding: 0.5rem;
+     &:disabled {
+         background: #d4d4d4;
+         cursor: default;
+    }
+
     }
 `;
 
