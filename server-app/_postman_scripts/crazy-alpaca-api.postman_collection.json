@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "a9c68c88-ba3f-42af-b010-2fdbc5170541",
+		"name": "crazy-alpaca-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET All Baskets",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true,
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/basket/",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"basket",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Basket By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"host": true,
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://{{host}}/basket/620b75e2cbdedfc870a2235a",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"basket",
+						"620b75e2cbdedfc870a2235a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE Basket By Id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true,
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"_id\": \"620d57fb49001b25b688f564\",\r\n        \"status\": \"NEW\",\r\n        \"products\": [\r\n            {\r\n                \"_id\": \"620b7237cbdedfc870a22355\",\r\n                \"quantity\": 1\r\n            },\r\n            {\r\n                \"_id\": \"620b7296cbdedfc870a22357\",\r\n                \"quantity\": 5\r\n            },\r\n            {\r\n                \"_id\": \"620b72accbdedfc870a22358\",\r\n                \"quantity\": 99\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/basket/620d57fb49001b25b688f564",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"basket",
+						"620d57fb49001b25b688f564"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE  Basket - PLACE ORDER - By Id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true,
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"_id\": \"620d57fb49001b25b688f564\",\r\n        \"placeOrder\": true,\r\n         \"products\": [\r\n            {\r\n                \"_id\": \"620b7237cbdedfc870a22355\",\r\n                \"quantity\": 1\r\n            },\r\n            {\r\n                \"_id\": \"620b7296cbdedfc870a22357\",\r\n                \"quantity\": 1\r\n            },\r\n            {\r\n                \"_id\": \"620b72accbdedfc870a22358\",\r\n                \"quantity\": 1\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/basket/620d57fb49001b25b688f564",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"basket",
+						"620d57fb49001b25b688f564"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Basket By Id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true,
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/basket/620d62e849001b25b688f568",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"basket",
+						"620d62e849001b25b688f568"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Products",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true,
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/products/",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Product By Id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/products/620b72accbdedfc870a22358",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"products",
+						"620b72accbdedfc870a22358"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE Product By Id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"_id\": \"000000000000000\",\r\n    \"name\": \"Shorts\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/products/620b72accbdedfc870a22358",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"products",
+						"620b72accbdedfc870a22358"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Product By Id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"host": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"_id\": \"000000000000000\",\r\n    \"name\": \"Shorts\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/products/620d5720931506a8cc364653",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"products",
+						"620d5720931506a8cc364653"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
