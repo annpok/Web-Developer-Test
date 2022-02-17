@@ -1,8 +1,11 @@
 # Shopping Cart application
 
 ##web-app
+
 UI part of the application. Contains basic logic to work with the Shopping Cart
+
 ##server-app 
+
 Server part. Contains REST API endpoints for UI part or Postman scripts collection (_postman_scripts folder - feel free to test) 
 
 To use server side you'll need to set up https://cloud.mongodb.com/  or use credentials from the config/db.js file _[credentials in the file will be removed soon]_
