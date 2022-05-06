@@ -127,7 +127,7 @@ const readBasketProducts = async (db, basketId, userBasket) => {
   let product_ids = [];
   if(!basket) {
     basket = await readRecordById(db, 'basket', basketId);
-    product_ids = basket.products.map(item =>item._id);
+    product_ids = basket?.products?.map(item =>item._id);
   } else if(userBasket.products) {
     product_ids = userBasket.products.map(item => new ObjectID(item._id));
   }

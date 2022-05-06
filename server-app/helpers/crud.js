@@ -37,7 +37,7 @@ const findRecords = async (db, name, query={}) => {
   try {
     res = await db.collection(name).find(query);
   }
-  catch {
+  catch (err){
     res = {'error':`An error has occurred err=${err}`};
   }
   return res;
